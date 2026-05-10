@@ -8,7 +8,7 @@ echo "2) 更改 docker 镜像"
 echo "3) 更改 go 镜像"
 echo "4) 更改 python 镜像"
 echo ""
-read -p "请输入选项 [1-4]: " choice
+read -p "请输入选项 [1-4]: " choice < /dev/tty
 
 case $choice in
     1)
@@ -18,13 +18,13 @@ case $choice in
         echo "1) Debian"
         echo "2) Ubuntu"
         echo ""
-        read -p "请输入选项 [1-2]: " distro_choice
+        read -p "请输入选项 [1-2]: " distro_choice < /dev/tty
 
         case $distro_choice in
             1)
                 echo "正在配置 Debian 镜像源..."
                 echo "注意：当前配置为 Debian 13 (trixie)"
-                read -n 1 -s -r -p "按任意键继续...Ctrl+C 取消"
+                read -n 1 -s -r -p "按任意键继续...Ctrl+C 取消" < /dev/tty
 
                 # 第1步：备份原文件
                 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
@@ -76,7 +76,7 @@ EOF
             2)
                 echo "正在配置 Ubuntu 镜像源..."
                 echo "注意：当前配置为 Ubuntu 26.04 LTS"
-                read -n 1 -s -r -p "按任意键继续...Ctrl+C 取消"
+                read -n 1 -s -r -p "按任意键继续...Ctrl+C 取消" < /dev/tty
 
                 # 第1步：备份原文件
                 sudo cp /etc/apt/sources.list.d/ubuntu.sources /etc/apt/sources.list.d/ubuntu.sources.bak
