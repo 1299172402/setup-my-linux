@@ -71,7 +71,7 @@ EOF
                 # 第5步：更新软件包列表
                 sudo apt update
 
-                echo "Debian 镜像源已更改为清华源 (HTTPS)"
+                echo "Debian 镜像源已更改为清华源"
                 ;;
             2)
                 echo "正在配置 Ubuntu 镜像源..."
